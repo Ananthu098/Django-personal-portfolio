@@ -1,0 +1,9 @@
+{% extends 'portfolio/base.html' %}
+{% block body %}
+<h1>This is blog home</h1>
+<div>
+{{blo.title}}<br>
+{{blo.disc}}<br>
+{{blo.date|date:'M d Y'|upper}}
+</div>
+{% endblock %}

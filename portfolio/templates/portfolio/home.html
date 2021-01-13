@@ -1,0 +1,12 @@
+{% extends 'portfolio/base.html' %}
+{% block body %}
+<h1>This is home</h1>
+{% load static %}
+<img src="{% static 'driving_back.jpg' %}">
+<h2><a href="{% url 'blog:all_blogs' %}">Blog</a></h2>
+{% for port in port %}
+{{port.title}}
+{{port.disc}}
+<img src="{{port.image.url }}" style="height:50px; width:50px;">
+{% endfor %}
+{% endblock %}
